@@ -1,0 +1,38 @@
+.table-container {
+    margin: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    border: none;
+    padding: 8px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .table-img {
+    height: 250px;
+    width: 300px;
+  }
+  
+  /* Responsive layout */
+  @media screen and (max-width: 800px) {
+    td {
+      display: block;
+      width: 100%;
+    }
+    table {
+      display: block;
+    }
+  }
+  
