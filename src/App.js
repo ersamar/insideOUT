@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Emotions from './components/Emotions';
@@ -77,14 +77,27 @@ const MainContent = () => (
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/security" element={<Security />} />
-        <Route path="/more-about" element={<MoreAbout />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/forgot-password" element={<ForgotPassword/>} />
-        <Route path="*" element={<MainContent />} />
-      </Routes>
+      <div>
+        <nav>
+          <ul>
+            <li><Link to="/home">Home</Link></li>
+            <li><Link to="/security">Security</Link></li>
+            <li><Link to="/more-about">More About</Link></li>
+            <li><Link to="/gallery">Gallery</Link></li>
+            <li><Link to="/news">News</Link></li>
+            <li><Link to="/forgot-password">Forgot Password</Link></li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/home" element={<MainContent />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/more-about" element={<MoreAbout />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="*" element={<MainContent />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
