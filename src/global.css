@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow-x: hidden;
+}
+.App {
+    position: relative;
+}
+.section {
+    padding-top: 50px;
+    background: rgba(255, 255, 255, 0.5);
+}
